@@ -1,4 +1,4 @@
-from sqlalchemy import Column, String, Integer
+from sqlalchemy import Column, String, Integer, Boolean
 from infra.sqlalchemy.config.database import Base
 
 
@@ -13,3 +13,4 @@ class Pessoa(Base):
     idade = Column (Integer)
     formacao = Column (String)
     endereco = Column (String)
+    admin = Column (Boolean)

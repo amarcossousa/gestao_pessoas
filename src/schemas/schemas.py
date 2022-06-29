@@ -16,13 +16,3 @@ class Pessoa(BaseModel):
     class Config:
         orm_mode = True
 
-
-class SuperUser(BaseModel):
-    id: Optional[int] = None
-    nome: str
-    email: str
-    cpf: str
-    senha: str 
-
-    class Config:
-        orm_mode =True
