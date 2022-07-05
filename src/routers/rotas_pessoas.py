@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends, status
 from sqlalchemy.orm import Session
-from schemas.schemas import Pessoa
+from schemas.schema import Pessoa
 from infra.sqlalchemy.repositorios.repositorio_pessoa import RepositorioPessoa
 from infra.sqlalchemy.config.database import get_db
 

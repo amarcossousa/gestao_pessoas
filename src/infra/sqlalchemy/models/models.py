@@ -3,7 +3,7 @@ from infra.sqlalchemy.config.database import Base
 
 
 class Pessoa(Base):
-    __tablename__ = 'pessoa'
+    __tablename__ = 'pessoas'
 
     id = Column (Integer, primary_key=True)
     nome = Column (String)
@@ -14,3 +14,12 @@ class Pessoa(Base):
     formacao = Column (String)
     endereco = Column (String)
     admin = Column (Boolean)
+
+
+class User(Base):
+    __tablename__ = 'users'
+
+    id = Column (Integer, primary_key=True)
+    email = Column (String)
+    cpf = Column (String)
+    senha = Column (String)

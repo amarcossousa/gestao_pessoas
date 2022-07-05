@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from infra.sqlalchemy.config.database import criar_bd
-from routers import rotas_pessoas
+from routers import rotas_pessoas, rotas_user
 
 criar_bd()
 
@@ -21,6 +21,8 @@ app.add_middleware(
 )
 
 app.include_router(rotas_pessoas.router)
+app.include_router(rotas_user.router)
+
 
 
 

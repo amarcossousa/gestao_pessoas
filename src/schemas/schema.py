@@ -16,3 +16,12 @@ class Pessoa(BaseModel):
     class Config:
         orm_mode = True
 
+
+class User(BaseModel):
+    id: Optional[int] =  None
+    email: EmailStr
+    cpf: str
+    senha: str
+
+    class Config:
+        orm_mode = True
